@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  userId   String  @unique
+  name     String? @default("")
+  email    String? @unique
+  imageUrl String? @default("")
+  scores   Score[]
+}
+
+model Score {
+  date   DateTime @default(now())
+  value  String   @default("")
+  userId String
+  user   User     @relation(fields: [userId], references: [userId])
+
+  @@id([date, userId])
+}
