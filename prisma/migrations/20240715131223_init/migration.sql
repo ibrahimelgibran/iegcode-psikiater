@@ -1,7 +1,0 @@
--- CreateTable
-CREATE TABLE "Score" (
-    "date" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "value" INTEGER NOT NULL DEFAULT 0,
-
-    CONSTRAINT "Score_pkey" PRIMARY KEY ("date")
-);
