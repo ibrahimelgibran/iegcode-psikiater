@@ -7,39 +7,51 @@ export default function AboutPage() {
       <Card className="p-10 flex flex-col gap-3 items-center">
         <Image
           src="/wellbeing.png"
-          alt="MoodMap Logo"
+          alt="IegMood Logo"
           width={100}
           height={100}
         />
+        <p className="mt-3 text-center font-bold">
+          Kekurangan Profesional Kesehatan Mental di Indonesia dan Solusi
+          Inovatif IegMood
+        </p>
         <p className="mt-5">
-          In India, the shortage of mental health professionals is severe, with
-          only 0.75 psychiatrists per 100,000 patients, well below the WHO
-          recommendation of at least 3 per 100,000. 🧠 This significant gap
-          underscores the urgent need for innovative solutions to improve mental
-          health care accessibility and support.
+          Jakarta, Indonesia - Kekurangan profesional kesehatan mental di
+          Indonesia telah menjadi masalah serius. Menurut data terbaru,
+          Indonesia memiliki hanya sekitar 0,75 psikiater per 100.000 penduduk,
+          jauh di bawah rekomendasi Organisasi Kesehatan Dunia (WHO) yang
+          menyarankan minimal 3 psikiater per 100.000 penduduk. 🧠 Kekurangan
+          ini mempertegas kebutuhan mendesak akan solusi inovatif untuk
+          meningkatkan aksesibilitas dan dukungan dalam perawatan kesehatan
+          mental.
         </p>
         <p>
-          MoodMap is a pioneering application designed to address this gap by
-          enabling daily depression tracking 📊 using the PHQ-9 test. The app
-          provides personalized feedback 🤖 through the Gemini model, offering
-          tailored advice and support to users based on their daily assessments.
+          Untuk mengatasi masalah ini, aplikasi IegMood hadir sebagai solusi
+          inovatif. IegMood memungkinkan pelacakan depresi harian 📊 menggunakan
+          tes PHQ-9, yang merupakan alat yang diakui secara internasional untuk
+          menilai gejala depresi. Aplikasi ini menawarkan umpan balik yang
+          dipersonalisasi 🤖 melalui model Gemini, memberikan saran dan dukungan
+          yang disesuaikan dengan penilaian harian pengguna.
         </p>
         <p>
-          Additionally, MoodMap facilitates affordable psychiatric monitoring
-          🩺. By allowing a single psychiatrist to remotely monitor multiple
-          patients, the app reduces consultancy costs and enhances the
-          psychiatrist ability to manage multiple patients efficiently. This
-          feature makes mental health care more accessible and cost-effective.
+          Selain itu, IegMood memfasilitasi pemantauan psikiatrik yang lebih
+          terjangkau 🩺. Dengan fitur yang memungkinkan satu psikiater untuk
+          memantau beberapa pasien secara jarak jauh, IegMood mengurangi biaya
+          konsultasi dan meningkatkan efisiensi psikiater dalam mengelola banyak
+          pasien. Ini bertujuan untuk membuat perawatan kesehatan mental lebih
+          terjangkau dan efektif.
         </p>
         <p>
-          MoodMap aims to make a significant impact by ensuring timely and
-          adequate support for patients through critical condition alerts 🚨 and
-          personalized advice 💬. By leveraging technology to bridge the gap
-          between mental health needs and resources, MoodMap aspires to build a
-          supportive community 🤝, making mental health care more scalable and
-          effective in India. 🌍
+          IegMood berkomitmen untuk memberikan dukungan yang tepat waktu melalui
+          peringatan kondisi kritis 🚨 dan saran yang dipersonalisasi 💬. Dengan
+          memanfaatkan teknologi, IegMood berharap dapat menjembatani
+          kesenjangan antara kebutuhan kesehatan mental dan sumber daya yang
+          tersedia di Indonesia, serta membangun komunitas yang mendukung 🤝 dan
+          meningkatkan efektivitas perawatan kesehatan mental di seluruh negeri.
+          🌍
         </p>
       </Card>
+      <br />
     </div>
   )
 }

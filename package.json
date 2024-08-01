@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "prisma generate",
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.3.0",
     "@clerk/nextjs": "^5.2.8",
     "@google/generative-ai": "^0.14.1",
     "@gsap/react": "^2.1.1",

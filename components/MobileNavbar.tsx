@@ -22,17 +22,20 @@ const MobileNavbar = () => {
   }, [activeMenu])
 
   return (
-    <div className={`relative z-10`} 
-    // @ts-ignore
+    <div
+      className={`relative z-10`}
+      // @ts-ignore
       ref={navbarRef}
-     >
+    >
       <nav className="p-4 px-10 flex items-center justify-between">
         <Link
           href="/"
           className="flex items-center font-black text-xl hover:scale-105 transition-all ease-in-out duration-300"
         >
+          <h1 className="text-blue-500 text-4xl mr-1">I</h1>
+          <h1 className="">eg</h1>
           <h1 className="text-blue-500 text-4xl mr-1">M</h1>
-          <h1 className="">oodMap</h1>
+          <h1 className="">ood</h1>
         </Link>
         <div
           className="flex flex-col gap-1 cursor-pointer"
@@ -108,7 +111,7 @@ const MobileNavbar = () => {
                 className="hover:text-black transition-all ease-in-out duration-300"
                 onClick={() => setActiveMenu(false)}
               >
-                Register
+                Daftar Sekarang
               </Link>
               <div className="w-0 h-1 group-hover:w-full bg-black transition-all ease-in-out duration-700"></div>
             </SignedOut>

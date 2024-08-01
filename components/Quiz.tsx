@@ -80,7 +80,8 @@ const Quiz = () => {
       setCount((prevCount) => prevCount + 1)
     } else {
       dispatch(initializeCount(0))
-      const sum = newAnswers.reduce((acc, curr) => acc + curr, 0) + selectedValue
+      const sum =
+        newAnswers.reduce((acc, curr) => acc + curr, 0) + selectedValue
       dispatch(incrementScore(sum))
       await handPrisma(sum - selectedValue)
       router.push('/response')
@@ -120,19 +121,19 @@ const Quiz = () => {
         >
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="0" id="r1" />
-            <Label htmlFor="r1">Not at all</Label>
+            <Label htmlFor="r1">Sama sekali tidak</Label>
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="1" id="r2" />
-            <Label htmlFor="r2">Several days</Label>
+            <Label htmlFor="r2">Beberapa hari</Label>
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="2" id="r3" />
-            <Label htmlFor="r3">More than half the days</Label>
+            <Label htmlFor="r3">Lebih dari separuh hari</Label>
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="3" id="r4" />
-            <Label htmlFor="r4">Nearly every day</Label>
+            <Label htmlFor="r4">Hampir setiap hari</Label>
           </div>
         </RadioGroup>
       </div>
@@ -141,7 +142,7 @@ const Quiz = () => {
           onClick={count > 0 ? handlePrev : () => {}}
           disabled={count <= 0}
         >
-          Prev
+          Sebelumnya
         </Button>
         {count >= PHQ9.length - 1 ? (
           <AlertDialogBox handleSubmit={handleSubmit} />

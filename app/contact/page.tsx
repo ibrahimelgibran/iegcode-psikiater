@@ -1,90 +1,88 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import Link from "next/link";
-import toast, { Toaster } from "react-hot-toast";
-import { useState } from "react";
-import { BeatLoader } from "react-spinners";
+import Image from 'next/image'
+import Link from 'next/link'
+import toast, { Toaster } from 'react-hot-toast'
+import { useState } from 'react'
+import { BeatLoader } from 'react-spinners'
 
 export default function Contact() {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
+  const [name, setName] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [message, setMessage] = useState<string>('')
+  const [loading, setLoading] = useState<boolean>(false)
 
   // create a function to validate the email
   const validateEmail = (email: string) => {
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  };
+    const re = /\S+@\S+\.\S+/
+    return re.test(email)
+  }
 
   // create a function to validate the name
   const validateName = (name: string) => {
-    const re = /^[a-zA-Z ]{2,30}$/;
-    return re.test(name);
-  };
+    const re = /^[a-zA-Z ]{2,30}$/
+    return re.test(name)
+  }
 
   // The below function is used to validate the form
   const validateForm = () => {
     if (!validateName(name)) {
-      toast.error("Please enter the valid name");
-      return false;
+      toast.error('Please enter the valid name')
+      return false
     }
     if (!validateEmail(email)) {
-      toast.error("Please enter the valid email");
-      return false;
+      toast.error('Please enter the valid email')
+      return false
     }
-    return true;
-  };
+    return true
+  }
 
   const handleSubmit = async () => {
     if (validateForm()) {
       try {
+        setLoading(true)
 
-        setLoading(true);
-
-        const response = await fetch("/api/contact", {
-          method: "POST",
+        const response = await fetch('/api/contact', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             name,
             email,
             message,
           }),
-        });
+        })
 
         try {
-          const response = await fetch("/api/hello", {
-            method: "POST",
+          const response = await fetch('/api/hello', {
+            method: 'POST',
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json',
             },
             body: JSON.stringify({
               email,
             }),
-          }) 
+          })
         } catch (error) {
-          console.log("")
+          console.log('')
         }
 
-        const data = await response.json();
+        const data = await response.json()
 
-        setLoading(false);
+        setLoading(false)
 
         if (data.error) {
-          toast.error(data.error);
-          return;
+          toast.error(data.error)
+          return
         }
 
-        toast.success("Message sent successfully")
-
+        toast.success('Message sent successfully')
       } catch (error) {
-        toast.error("Something went wrong please try again later");
+        toast.error('Something went wrong please try again later')
       }
     }
-  };
+  }
 
   return (
     <div className="text-extrabold flex flex-col lg:flex-row lg:justify-around items-center overflow-x-hidden mt-10 lg:mt-10 mb-10">
@@ -93,7 +91,8 @@ export default function Contact() {
         <div className="flex flex-col gap-5">
           <h1 className="text-5xl font-black text-center">Contact us</h1>
           <p className="text-lg w-80 text-center">
-            Fill up the form and I will get back to you within 24 hours
+            Isi formulir dan saya akan menghubungi Anda kembali dalam waktu 24
+            jam
           </p>
         </div>
         <div className="flex flex-col gap-5">
@@ -105,7 +104,7 @@ export default function Contact() {
               width={25}
               height={25}
             />
-            <p>+91 6281768263</p>
+            <p>+62 8587607605</p>
           </span>
           <span className="flex gap-5 align-center">
             <Image
@@ -115,7 +114,7 @@ export default function Contact() {
               width={25}
               height={25}
             />
-            <p>kanugurajesh6@gmail.com</p>
+            <p>iegcodeid@gmail.com</p>
           </span>
           <span className="flex gap-5 align-center">
             <Image
@@ -125,13 +124,13 @@ export default function Contact() {
               width={25}
               height={25}
             />
-            <Link href="https://www.instagram.com/kanugurajesh/">
-              <p>kanugurajesh3</p>
+            <Link href="https://www.instagram.com/iegcode/">
+              <p>iegcode</p>
             </Link>
           </span>
         </div>
         <div className="flex gap-10">
-          <Link href="https://www.linkedin.com/in/rajesh-kanugu-aba8a3254/">
+          <Link href="https://www.linkedin.com/ibrahimelgibran/">
             <Image
               src="/linkedin-contact.png"
               className="hover:scale-110 transition ease-in-out"
@@ -140,16 +139,7 @@ export default function Contact() {
               height={35}
             />
           </Link>
-          <Link href="https://twitter.com/exploringengin1">
-            <Image
-              src="/twitter.png"
-              className="hover:scale-110 transition ease-in-out"
-              alt="X"
-              width={35}
-              height={35}
-            />
-          </Link>
-          <Link href="https://www.instagram.com/kanugurajesh/">
+          <Link href="https://www.instagram.com/iegcode/">
             <Image
               src="/instagram-contact.png"
               className="hover:scale-110 transition ease-in-out"
@@ -158,7 +148,7 @@ export default function Contact() {
               height={35}
             />
           </Link>
-          <Link href="https://github.com/kanugurajesh/">
+          <Link href="https://github.com/ibrahimelgibran/">
             <Image
               src="/github-contact.png"
               className="hover:scale-110 transition ease-in-out"
@@ -190,7 +180,7 @@ export default function Contact() {
             placeholder="Enter the name"
             value={name}
             onChange={(e) => {
-              setName(e.target.value);
+              setName(e.target.value)
             }}
           />
         </div>
@@ -205,7 +195,7 @@ export default function Contact() {
             placeholder="Enter the email"
             value={email}
             onChange={(e) => {
-              setEmail(e.target.value);
+              setEmail(e.target.value)
             }}
           />
         </div>
@@ -223,7 +213,7 @@ export default function Contact() {
             className="border outline-0 border-1 h-40 rounded-md p-2 font-normal w-80 focus:border-blue-500 focus:border-2"
             value={message}
             onChange={(e) => {
-              setMessage(e.target.value);
+              setMessage(e.target.value)
             }}
           ></textarea>
         </div>
@@ -233,10 +223,10 @@ export default function Contact() {
             className="w-full font-bold bg-blue-500 text-white px-5 py-3 rounded-md border-2 transition border-blue-500 ease-in-out mb-10 lg:mb-0 hover:bg-white hover:text-blue-500"
             onClick={() => handleSubmit()}
           >
-            {loading ? <BeatLoader size={8} color="white" /> : "Send Message"}
+            {loading ? <BeatLoader size={8} color="white" /> : 'Send Message'}
           </button>
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,32 +1,34 @@
 // This file contains all the phq-9 standard questionairre for depression analysis
 
 const PHQ9 = [
-  { question: 'Little interest or pleasure in doing things', answer: 0 },
-  { question: 'Feeling down, depressed, or hopeless', answer: 0 },
   {
-    question: 'Trouble falling or staying asleep, or sleeping too much',
+    question: 'Kurangnya minat atau kesenangan dalam melakukan sesuatu',
     answer: 0,
   },
-  { question: 'Feeling tired or having little energy', answer: 0 },
-  { question: 'Poor appetite or overeating', answer: 0 },
+  { question: 'Merasa sedih, tertekan, atau putus asa', answer: 0 },
   {
-    question:
-      'Feeling bad about yourself - or that you are a failure or have let yourself or your family down',
+    question: 'Kesulitan jatuh atau tetap tertidur, atau terlalu banyak tidur',
     answer: 0,
   },
+  { question: 'Merasa lelah atau memiliki sedikit energi', answer: 0 },
+  { question: 'Kehilangan nafsu makan atau makan berlebihan', answer: 0 },
   {
     question:
-      'Trouble concentrating on things, such as reading the newspaper or watching television',
-    answer: 0,
-  },
-  {
-    question:
-      'Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual',
+      'Merasa buruk tentang diri sendiri - atau bahwa Anda gagal atau telah mengecewakan diri sendiri atau keluarga Anda',
     answer: 0,
   },
   {
     question:
-      'Thoughts that you would be better off dead, or of hurting yourself',
+      'Kesulitan berkonsentrasi pada sesuatu, seperti membaca koran atau menonton televisi',
+    answer: 0,
+  },
+  {
+    question:
+      'Bergerak atau berbicara dengan sangat lambat sehingga orang lain dapat menyadarinya. Atau sebaliknya - menjadi sangat gelisah atau gelisah sehingga Anda lebih banyak bergerak dari biasanya',
+    answer: 0,
+  },
+  {
+    question: 'Pikiran bahwa Anda lebih baik mati, atau menyakiti diri sendiri',
     answer: 0,
   },
 ]

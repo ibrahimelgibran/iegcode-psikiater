@@ -12,7 +12,8 @@ const Response = () => {
   const score = useSelector((state: RootState) => state.score.value)
   const [response, setResponse] = useState<string>('')
 
-  const prompt = `I got a score of ${score}/27 on the PHQ-9. Can you explain what this means regarding the severity of my depression? Additionally, could you provide me with some health tips and resources to help manage my mental health?`
+  // Updated prompt to request response in Indonesian
+  const prompt = `Saya mendapatkan skor ${score}/27 pada PHQ-9. Bisakah Anda menjelaskan apa artinya terkait dengan tingkat keparahan depresi saya? Selain itu, dapatkah Anda memberikan beberapa tips kesehatan dan sumber daya untuk membantu mengelola kesehatan mental saya? Mohon jawab dalam bahasa Indonesia.`
 
   const tokens = 1000
 
@@ -59,6 +60,8 @@ const Response = () => {
           </div>
         )}
       </div>
+      <br />
+      <br />
     </main>
   )
 }
