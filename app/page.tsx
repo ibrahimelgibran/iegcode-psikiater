@@ -70,13 +70,13 @@ export default function Home() {
               href="/privacy-policy"
               className="text-white-400 hover:underline font-bold"
             >
-              made with by
+              made with ❤️ by
             </Link>{' '}
             <Link
               href="iegcode.com"
               className="text-blue-400 hover:underline font-bold"
             >
-              ❤️ iegcode
+              iegcode
             </Link>
           </p>
         </div>
