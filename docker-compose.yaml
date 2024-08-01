@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: kesehatan
+    container_name: iegmood
     ports:
       - 3000:3000
     volumes:
