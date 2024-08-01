@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    // @ts-ignore
+    // @ts-ignoree
     const data = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
       to: process.env.PERSONAL_EMAIL as string,
