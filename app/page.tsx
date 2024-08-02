@@ -73,7 +73,7 @@ export default function Home() {
               made with ❤️ by
             </Link>{' '}
             <Link
-              href="iegcode.com"
+              href="https://www.iegcode.com"
               className="text-blue-400 hover:underline font-bold"
             >
               iegcode
