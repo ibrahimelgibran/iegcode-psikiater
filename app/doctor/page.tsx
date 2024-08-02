@@ -32,7 +32,7 @@ const Page = () => {
   return (
     <main className="flex flex-col gap-2 justify-center items-center">
       <h1 className="font-bold text-2xl mt-5 mb-3">Check your patients</h1>
-      <div className='flex gap-6'>
+      <div className="flex gap-6">
         {users.length > 0 ? (
           users.map((user: userI) => (
             <Link

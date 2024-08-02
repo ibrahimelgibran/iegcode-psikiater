@@ -98,11 +98,10 @@ const LineChart = () => {
       // @ts-ignore
       setValues(values1)
 
-      const prompt = `The following are the PHQ-9 assessment scores over time:\nDates: ${labels1.join(
-        ', '
-      )}\nScores: ${values1.join(
-        ', '
-      )} can you explain the score to the patient this is a project please be free to provide any suggestion`
+      const prompt = `Berikut adalah skor penilaian PHQ-9 dari waktu ke waktu:
+      Tanggal: ${labels1.join(', ')}
+      Skor: ${values1.join(', ')}
+      Bisakah Anda menjelaskan skor ini kepada pasien? Ini adalah proyek, jadi silakan beri saran jika ada.`
 
       const geminiResponse = await sendGemini(prompt, 1000)
 
