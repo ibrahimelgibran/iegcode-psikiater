@@ -16,7 +16,7 @@ export default function ServicesPage() {
           height={400}
           className="cursor-pointer w-full h-52"
         />
-        <p className="font-semibold">Rumah dari aplikasi kesehatan mental</p>
+        <p className="font-semibold">Rumah dari aplikasi kesehatan mental.</p>
       </Card>
       <Card className="w-[350px] h-[350px] flex flex-col gap-4 p-5">
         <Image
@@ -27,7 +27,7 @@ export default function ServicesPage() {
           className="cursor-pointer w-full h-52"
         />
         <p className="font-semibold">
-          Menerapkan otentikasi yang sangat kuat dalam aplikasi
+          Menerapkan otentikasi yang sangat kuat dalam aplikasi.
         </p>
       </Card>
       <Card className="w-[350px] h-[350px] flex flex-col gap-4 p-5">
@@ -40,7 +40,7 @@ export default function ServicesPage() {
         />
         <p className="font-semibold">
           Setelah otentikasi, pengguna dapat mengubah datanya dari tombol
-          Pengguna
+          Pengguna.
         </p>
       </Card>
       <Card className="w-[350px] h-[350px] flex flex-col gap-4 p-5">
@@ -52,7 +52,7 @@ export default function ServicesPage() {
           className="cursor-pointer w-full h-52"
         />
         <p className="font-semibold">
-          Halaman ini menceritakan rincian tentang proyek tersebut
+          Halaman ini menceritakan rincian tentang proyek tersebut.
         </p>
       </Card>
       <Card className="w-[350px] h-[350px] flex flex-col gap-4 p-5">
@@ -65,7 +65,20 @@ export default function ServicesPage() {
         />
         <p className="font-semibold">
           Elemen ini digunakan untuk mengikuti tes dari pengguna untuk melacak
-          depresinya
+          depresinya.
+        </p>
+      </Card>
+      <Card className="w-[350px] h-[350px] flex flex-col gap-4 p-5">
+        <Image
+          src="/services/response.png"
+          alt="clerk auth"
+          width={400}
+          height={400}
+          className="cursor-pointer w-full h-52"
+        />
+        <p className="font-semibold">
+          Setelah selesai test, anda akan mendapatkan feedback saran dan
+          kritikan dari Ai.
         </p>
       </Card>
       <Card className="w-[350px] h-[350px] flex flex-col gap-4 p-5">
@@ -77,7 +90,7 @@ export default function ServicesPage() {
           className="cursor-pointer w-full h-52"
         />
         <p className="font-semibold">
-          Formulir ini digunakan untuk menghubungi jika terjadi keadaan darurat
+          Formulir ini digunakan untuk menghubungi jika terjadi keadaan darurat.
         </p>
       </Card>
       <Card className="w-[350px] h-[350px] flex flex-col gap-4 p-5">
@@ -90,7 +103,7 @@ export default function ServicesPage() {
         />
         <p className="font-semibold">
           Halaman ini hanya dapat diakses oleh para profesional yang dapat
-          melacak semua pasien menggunakan aplikasi
+          melacak semua pasien menggunakan aplikasi.
         </p>
       </Card>
       <Card className="w-[350px] h-[350px] flex flex-col gap-4 p-5">
@@ -102,7 +115,7 @@ export default function ServicesPage() {
           className="cursor-pointer w-full h-52"
         />
         <p className="font-semibold">
-          Anda dapat mengajukan pertanyaan gemini dari elemen ini
+          Anda dapat mengajukan pertanyaan gemini dari elemen ini.
         </p>
       </Card>
       <Card className="w-[350px] h-[350px] flex flex-col gap-4 p-5">
@@ -114,7 +127,7 @@ export default function ServicesPage() {
           className="cursor-pointer w-full h-52"
         />
         <p className="font-semibold">
-          Halaman ini menunjukkan layanan dan fitur aplikasi
+          Halaman ini menunjukkan layanan dan fitur aplikasi.
         </p>
       </Card>
     </div>
