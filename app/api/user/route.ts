@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
   try {
     const { userId, name, email, imageUrl } = await request.json()
 
-    console.log('Received data:', { userId, name, email, imageUrl }) // Tambahkan logging ini
+    console.log('Received data:', { userId, name, email, imageUrl }) // Tambahkan logging ini.
 
     if (!userId || !name || !email || !imageUrl) {
       return NextResponse.json({ error: 'Invalid input' }, { status: 400 })
