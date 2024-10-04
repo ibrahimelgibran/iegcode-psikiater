@@ -68,5 +68,5 @@ const Response = () => {
 
 export default Response
 {
-  /* ssSs */
+  /* sssSs */
 }
